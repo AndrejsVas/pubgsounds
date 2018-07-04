@@ -1,7 +1,7 @@
 document.getElementById("valBox").innerHTML=500;
 
 function showVal(newVal , weaponName){
-    document.getElementById("valBox").innerHTML=newVal;
+    document.getElementById("valBox").innerHTML=newVal+'m';
 
     var audio = document.getElementById('audio');
     var source = document.getElementById('audioSource');

@@ -7,21 +7,39 @@
 -->
 
 <div class="container">
+
+
     <div class="image">
         <image src="images/p92.png"></image>
     </div>
-    <div class="player">
-        <audio id="audio" controls="controls">
-            <source id="audioSource" src="audio/p92-100.mp3"></source>
-            Your browser does not support the audio format.
-        </audio>
-    </div>
-    <div class="rangeFinder">
-        <input type="range" min="000" max="1000" step="100" oninput="showVal(this.value,'p92')" onchange="showVal(this.value,'p92')">
-        <span id="valBox">500</span>
-    </div>
+    <div class="huj">
+        <h1>P92</h1>
+        <h2>Unsilenced</h2>
+        Audible Range 0-700m
+        <div class="rangeFinder">
+            <input type="range" min="000" max="1000" step="100" oninput="showVal(this.value,'p92')" onchange="showVal(this.value,'p92')">
+            <span id="valBox">500m</span>
+        </div>
+        <div class="player">
+            <audio id="audio" controls="controls">
+                <source id="audioSource" src="audio/p92-100.mp3"></source>
+                Your browser does not support the audio format.
+            </audio>
+        </div>
 
-
+        <h2>Silenced</h2>
+        Audible Range 0-300m
+        <div class="player">
+            <audio id="audio" controls="controls">
+                <source id="audioSource" src="audio/p92-100.mp3"></source>
+                Your browser does not support the audio format.
+            </audio>
+        </div>
+        <div class="rangeFinder">
+            <input type="range" min="000" max="1000" step="100" oninput="showVal(this.value,'p92')" onchange="showVal(this.value,'p92')">
+            <span id="valBox">500</span>
+        </div>
+    </div>
 
 </div>
 <div>

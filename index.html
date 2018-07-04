@@ -1,21 +1,36 @@
+<!--
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Super Cool Site</title>
-    <style>
-        body {
-            text-align:center;
-            background:#EFEFEF;
-            padding-top:50px;
-        }
-    </style>
-</head>
-<body>
+<form id="sliderData">
+    <input id="slider1" type="range" min="0" max="5" value="0">
+    <span>2</span> &lt;!&ndash; default value &ndash;&gt;
+</form>
+-->
 
+<div>
+
+<input type="range" min="000" max="1000" step="100" oninput="showVal(this.value,'p92')" onchange="showVal(this.value,'p92')"></br>
+<span id="valBox">500</span>
+
+
+<audio id="audio" controls="controls">
+    <source id="audioSource" src="audio/p92-100.mp3"></source>
+    Your browser does not support the audio format.
+</audio>
+
+</div>
 <h1>Hello Universe!</h1>
 
-</body>
-</html>
+<script>
+    document.getElementById("valBox").innerHTML=500;
 
+    function showVal(newVal , weaponName){
+        document.getElementById("valBox").innerHTML=newVal;
+
+        var audio = document.getElementById('audio');
+        var source = document.getElementById('audioSource');
+        source.src = 'audio/'+weaponName+'-'+newVal+'.mp3';
+
+        audio.load(); //call this to just preload the audio without playing
+        /*audio.play(); //call this to play the song right away*/
+    }
+</script>

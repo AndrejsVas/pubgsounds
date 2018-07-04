@@ -37,3 +37,6 @@
     /*width:300px;*/
     text-align: center;
 }
+input[type=range]{
+    width:100%;
+}

@@ -1,7 +1,7 @@
 document.getElementById("valBox").innerHTML=500;
 
 function showVal(newVal , weaponName,silenced){
-    document.getElementById("valBox"+weaponName+silenced).innerHTML=newVal+'m';
+    document.getElementById("valBox"+weaponName+silenced).innerHTML='Current range is : '+newVal+'m';
     var audio = document.getElementById('audio'+weaponName+silenced);
     var source = document.getElementById('audioSource'+weaponName+silenced);
     source.src = 'audio/'+weaponName+'-'+newVal+'.mp3';

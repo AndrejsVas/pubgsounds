@@ -21,7 +21,6 @@
                         <h1>R45</h1>
                         </br>
                         </br>
-            <!--            <h2>Unsilenced</h2>-->
                         Audible Range 0-300m
                         <div class="rangeFinder">
                             <input type="range" min="000" max="300" step="100" value="0" oninput="showVal(this.value,'r45','1','single')">
@@ -49,50 +48,32 @@
 
                         <form>
                             <label>Unsilenced</label>
-                            <input type="radio" ng-model="main.content" value=true>
+                            <input type="radio" ng-model="main.p1911.issilenced" value='1' ng-change="main.reloadaudio(main.p1911.range,'p1911',main.p1911.issilenced,main.p1911.firemode)">
                             <label>Silenced</label>
-                            <input type="radio" ng-model="main.content" value=false>
+                            <input type="radio" ng-model="main.p1911.issilenced" value='2' ng-change="main.reloadaudio(main.p1911.range,'p1911',main.p1911.issilenced,main.p1911.firemode)">
                         </form>
 
                         <form>
                             <label>Single</label>
-                            <input type="radio" ng-model="main.p1911.firemode" value="single"  >
+                            <input type="radio" ng-model="main.p1911.firemode" value="single"  ng-change="main.reloadaudio(main.p1911.range,'p1911',main.p1911.issilenced,main.p1911.firemode)">
                             <label>Auto</label>
-                            <input type="radio" ng-model="main.p1911.firemode" value="auto"  >
+                            <input type="radio" ng-model="main.p1911.firemode" value="auto" ng-change="main.reloadaudio(main.p1911.range,'p1911',main.p1911.issilenced,main.p1911.firemode)" >
                         </form>
 
-                        <div ng-show="main.isSilenced()" class="ng-hide">
-                         <!--   <h2>Unsilenced</h2>-->
+                        <div>
                             Audible Range 0-700m
                             <div class="rangeFinder">
-                                <input type="range" min="000" max="1000" ng-model=main.p1911.range step="100" ng-change="main.reloadauidio(main.p1911.range,'p1911','1',main.p1911.firemode)">
-                                <span id="valBoxp19111">Current range is : 0m</span>
+                                <input type="range" min="100" max="200" ng-model=main.p1911.range step="100" ng-change="main.reloadaudio(main.p1911.range,'p1911',main.p1911.issilenced,main.p1911.firemode)">
+                                <span id="valBoxp1911">Current range is : 0m</span>
                             </div>
                             <div class="player">
-                                <audio id="audiop19111single" controls="controls">
-                                    <source id="audioSourcep19111single" src="audio/p1911-100-1-single.mp3"></source>
+                                <audio id="audiop1911" controls="controls">
+                                    <source id="audioSourcep1911" src="audio/p1911-100-1-single.mp3"></source>
                                     Your browser does not support the audio format.
                                 </audio>
                             </div>
                         </div>
-<!--                        <div ng-show="!main.isSilenced()" class="ng-hide">
-                            <h2>Silenced</h2>
-                            Audible Range 0-300m
-                            <div class="rangeFinder">
-                                <input type="range" min="000" max="1000" value="0" step="100" oninput="showVal(this.value,'p1911','2','single')">
-                                <span id="valBoxp19112">Current range is : 500m</span>
-                            </div>
-                            <div class="player">
-                                <audio id="audiop19112single" controls="controls">
-                                    <source id="audioSourcep19112single" src="audio/p1911-100-1-single.mp3"></source>
-                                    Your browser does not support the audio format.
-                                </audio>
-                            </div>
-                        </div>-->
-
                     </div>
-
-
                 </div>
             </div>
 

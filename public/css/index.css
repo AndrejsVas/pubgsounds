@@ -17,17 +17,13 @@ body {
     color:#ff9900;
 }
 .category {
-
     display:flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-
-
 }
 
 .container {
-    font-family: 'Lora', serif;
     width:600px;
     height:600px;
     margin: 0;
@@ -37,6 +33,11 @@ body {
     overflow: hidden;
 
 }
+
+.container .rangeFinder {
+	font-family: 'Lora', serif;
+}
+
 .container .image{
     width:240px;
     height:240px;

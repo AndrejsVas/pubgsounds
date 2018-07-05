@@ -52,9 +52,9 @@
 
                         <form>
                             <label>Unsilenced</label>
-                            <input type="radio" ng-model="main.p1911.issilenced" value='1' ng-change="main.reloadaudio(main.p1911.range,'p1911',main.p1911.issilenced,main.p1911.firemode)">
+                            <input type="radio" ng-model="main.p1911.issilenced" value='1'  ng-change="main.redrawreload(main.p1911.range,'p1911',main.p1911.issilenced,main.p1911.firemode,'0','600')">
                             <label>Silenced</label>
-                            <input type="radio" ng-model="main.p1911.issilenced" value='2' ng-change="main.reloadaudio(main.p1911.range,'p1911',main.p1911.issilenced,main.p1911.firemode)">
+                            <input type="radio" ng-model="main.p1911.issilenced" value='2' ng-change="main.redrawreload(main.p1911.range,'p1911',main.p1911.issilenced,main.p1911.firemode,'0','300')">
                         </form>
 
                         <form>
@@ -66,11 +66,15 @@
 
                         <div>
                             Audible Range 0-700m
+
+
+                            <!--Unsilenced-->
                             <div class="rangeFinder">
-                                <input type="range" min="100" max="200" ng-model=main.p1911.range step="100" ng-change="main.reloadaudio(main.p1911.range,'p1911',main.p1911.issilenced,main.p1911.firemode)">
+                                <input id="weapon1" type="range" min="0" max="600" ng-model=main.p1911.range step="100" ng-change="main.reloadaudio(main.p1911.range,'p1911',main.p1911.issilenced,main.p1911.firemode)">
                                 <br>
-                                <span id="valBoxp1911">Current range is : 0m</span>
+                                <span id="valBoxp1911">Current range : 0m</span>
                             </div>
+
                             <br>
                             <div class="player">
                                 <audio id="audiop1911" controls="controls">

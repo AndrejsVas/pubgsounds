@@ -14,10 +14,18 @@ angular.module('app', [])
         vm.R45=R45;
         vm.R45.firemode = "single";
         vm.R45.range= 0;
+        vm.R45.range2= 0;
         vm.R45.issilenced = '1';
 
+        vm.redrawreload = function(range,weaponname , issilenced , firemode,rangemin,rangemax){
+            vm.reloadaudio(range,weaponname,issilenced,firemode);
+            vm.redrawrange(rangemin,rangemax);
+        };
 
-
+        vm.redrawrange = function(rangemin,rangemax){
+            angular.element( document.querySelector("#weapon1"))[0].min=rangemin;
+            angular.element( document.querySelector("#weapon1"))[0].max=rangemax;
+        };
         vm.reloadaudio = function(range,weaponname , issilenced , firemode){
 
             angular.element( document.querySelector("#valBox"+weaponname))[0].innerHTML='Current range is : '+range+'m';
@@ -26,5 +34,7 @@ angular.module('app', [])
             source.src = 'audio/'+weaponname+'-'+range+'-'+issilenced+'-'+firemode+'.mp3';
 
             audio.load();
-        }
+        };
+
+
     });

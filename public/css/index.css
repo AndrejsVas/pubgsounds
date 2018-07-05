@@ -10,6 +10,7 @@ body {
     margin-right: 11% ;
 }
 .categoryheader{
+	height: 110px;
     background-color:#404040;
     font-size:80px;
     font-family: 'Lora', serif;

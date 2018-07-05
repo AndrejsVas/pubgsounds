@@ -9,7 +9,7 @@
 
 .container {
     width:600px;
-    height:420px;
+    height:600px;
     margin: 0;
     display: flex;
     border-style: solid;
@@ -18,7 +18,6 @@
 
 }
 .container .image{
-    align-self: center;
     width:240px;
     height:240px;
     margin: 0;

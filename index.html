@@ -167,13 +167,14 @@
 
     <div class="container">
 
-
         <div class="image">
             <image src="images/r45.png"></image>
         </div>
         <div class="rightSide">
             <h1>R45</h1>
-            <h2>Unsilenced</h2>
+            </br>
+            </br>
+<!--            <h2>Unsilenced</h2>-->
             Audible Range 0-300m
             <div class="rangeFinder">
                 <input type="range" min="000" max="300" step="100" value="0" oninput="showVal(this.value,'r45','1')" onchange="showVal(this.value,'p92')">
@@ -185,22 +186,7 @@
                     Your browser does not support the audio format.
                 </audio>
             </div>
-
-            <h2>Silenced</h2>
-            Audible Range 0-300m
-            <div class="rangeFinder">
-                <input type="range" min="000" max="1000" step="100" oninput="showVal(this.value,'r45','2')" onchange="showVal(this.value,'p92')">
-                <span id="valBoxr452">Current range is : 500m</span>
-            </div>
-            <div class="player">
-                <audio id="audior452" controls="controls">
-                    <source id="audioSourcer452" src="audio/p92-100.mp3"></source>
-                    Your browser does not support the audio format.
-                </audio>
-            </div>
-
         </div>
-
     </div>
 </div>
 

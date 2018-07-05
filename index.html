@@ -1,128 +1,164 @@
-<!--
 
-<form id="sliderData">
-    <input id="slider1" type="range" min="0" max="5" value="0">
-    <span>2</span> &lt;!&ndash; default value &ndash;&gt;
-</form>
--->
-
-
-
+<div class="bg">
+<div class="main">
 <!-- ******************************************************************************* -->
 <!-- *********************************** PISTOLS *********************************** -->
 <!-- ******************************************************************************* -->
-<h1 class="categoryheader">Pistols</h1>
-<div class ="category">
+    <h1 class="categoryheader">Pistols</h1>
+    <div class ="category">
 
 
 
-    <!--*****-->
-    <!--r45---->
-    <!--*****-->
-    <div class="container">
+        <!--*****-->
+        <!--r45---->
+        <!--*****-->
+        <div class="container">
 
-        <div class="image">
-            <image src="images/r45.png"></image>
+            <div class="image">
+                <image src="images/r45.png"></image>
+            </div>
+            <div class="rightSide">
+                <h1>R45</h1>
+                </br>
+                </br>
+    <!--            <h2>Unsilenced</h2>-->
+                Audible Range 0-300m
+                <div class="rangeFinder">
+                    <input type="range" min="000" max="300" step="100" value="0" oninput="showVal(this.value,'r45','1','single')">
+                    <span id="valBoxr451">Current range is : 0m</span>
+                </div>
+                <div class="player">
+                    <audio id="audior451single" controls="controls">
+                        <source id="audioSourcer451single" src="audio/r45-0-1-single.mp3"></source>
+                        Your browser does not support the audio format.
+                    </audio>
+                </div>
+            </div>
         </div>
-        <div class="rightSide">
-            <h1>R45</h1>
-            </br>
-            </br>
-<!--            <h2>Unsilenced</h2>-->
-            Audible Range 0-300m
-            <div class="rangeFinder">
-                <input type="range" min="000" max="300" step="100" value="0" oninput="showVal(this.value,'r45','1','single')">
-                <span id="valBoxr451">Current range is : 0m</span>
+        <!--*****-->
+        <!--p1911-->
+        <!--*****-->
+        <div class="container">
+
+
+            <div class="image">
+                <image src="images/p1911.png"></image>
             </div>
-            <div class="player">
-                <audio id="audior451single" controls="controls">
-                    <source id="audioSourcer451single" src="audio/r45-0-1-single.mp3"></source>
-                    Your browser does not support the audio format.
-                </audio>
+            <div class="rightSide">
+                <h1>P1911</h1>
+                <h2>Unsilenced</h2>
+                Audible Range 0-700m
+                <div class="rangeFinder">
+                    <input type="range" min="000" max="1000" step="100" oninput="showVal(this.value,'p1911','1','single')" onchange="showVal(this.value,'p92')">
+                    <span id="valBoxp19111">Current range is : 500m</span>
+                </div>
+                <div class="player">
+                    <audio id="audiop19111single" controls="controls">
+                        <source id="audioSourcep19111single" src="audio/p1911-100-1-single.mp3"></source>
+                        Your browser does not support the audio format.
+                    </audio>
+                </div>
+
+                <h2>Silenced</h2>
+                Audible Range 0-300m
+                <div class="rangeFinder">
+                    <input type="range" min="000" max="1000" step="100" oninput="showVal(this.value,'p1911','2','single')" onchange="showVal(this.value,'p92')">
+                    <span id="valBoxp19112">Current range is : 500m</span>
+                </div>
+                <div class="player">
+                    <audio id="audiop19112single" controls="controls">
+                        <source id="audioSourcep19112single" src="audio/p1911-100-1-single.mp3"></source>
+                        Your browser does not support the audio format.
+                    </audio>
+                </div>
+
             </div>
+
+
+        </div>
+        <!--*****-->
+        <!--p1911-->
+        <!--*****-->
+        <div class="container">
+
+
+            <div class="image">
+                <image src="images/p1911.png"></image>
+            </div>
+            <div class="rightSide">
+                <h1>P1911</h1>
+                <h2>Unsilenced</h2>
+                Audible Range 0-700m
+                <div class="rangeFinder">
+                    <input type="range" min="000" max="1000" step="100" oninput="showVal(this.value,'p1911','1','single')" onchange="showVal(this.value,'p92')">
+                    <span id="valBoxp19111">Current range is : 500m</span>
+                </div>
+                <div class="player">
+                    <audio id="audiop19111single" controls="controls">
+                        <source id="audioSourcep19111single" src="audio/p1911-100-1-single.mp3"></source>
+                        Your browser does not support the audio format.
+                    </audio>
+                </div>
+
+                <h2>Silenced</h2>
+                Audible Range 0-300m
+                <div class="rangeFinder">
+                    <input type="range" min="000" max="1000" step="100" oninput="showVal(this.value,'p1911','2','single')" onchange="showVal(this.value,'p92')">
+                    <span id="valBoxp19112">Current range is : 500m</span>
+                </div>
+                <div class="player">
+                    <audio id="audiop19112single" controls="controls">
+                        <source id="audioSourcep19112single" src="audio/p1911-100-1-single.mp3"></source>
+                        Your browser does not support the audio format.
+                    </audio>
+                </div>
+
+            </div>
+
+
         </div>
     </div>
-    <!--*****-->
-    <!--p1911-->
-    <!--*****-->
-    <div class="container">
-
-
-        <div class="image">
-            <image src="images/p1911.png"></image>
-        </div>
-        <div class="rightSide">
-            <h1>P1911</h1>
-            <h2>Unsilenced</h2>
-            Audible Range 0-700m
-            <div class="rangeFinder">
-                <input type="range" min="000" max="1000" step="100" oninput="showVal(this.value,'p1911','1','single')" onchange="showVal(this.value,'p92')">
-                <span id="valBoxp19111">Current range is : 500m</span>
-            </div>
-            <div class="player">
-                <audio id="audiop19111single" controls="controls">
-                    <source id="audioSourcep19111single" src="audio/p1911-100-1-single.mp3"></source>
-                    Your browser does not support the audio format.
-                </audio>
-            </div>
-
-            <h2>Silenced</h2>
-            Audible Range 0-300m
-            <div class="rangeFinder">
-                <input type="range" min="000" max="1000" step="100" oninput="showVal(this.value,'p1911','2','single')" onchange="showVal(this.value,'p92')">
-                <span id="valBoxp19112">Current range is : 500m</span>
-            </div>
-            <div class="player">
-                <audio id="audiop19112single" controls="controls">
-                    <source id="audioSourcep19112single" src="audio/p1911-100-1-single.mp3"></source>
-                    Your browser does not support the audio format.
-                </audio>
-            </div>
-
-        </div>
-
-    </div>
-
-</div>
 
 <!-- ******************************************************************************* -->
 <!-- *********************************** Shotguns ********************************** -->
 <!-- ******************************************************************************* -->
-<h1 class="categoryheader">Shotguns</h1>
-<div class ="category">
+    <h1 class="categoryheader">Shotguns</h1>
+    <div class ="category">
 
 
 
-    <!--*****-->
-    <!--s1897-->
-    <!--*****-->
-    <div class="container">
+        <!--*****-->
+        <!--s1897-->
+        <!--*****-->
+        <div class="container">
 
-        <div class="image">
-            <image src="images/s1897.png"></image>
-        </div>
-        <div class="rightSide">
-            <h1>S1897</h1>
-            </br>
-            </br>
-            Audible Range 0-500m
-            <div class="rangeFinder">
-                <input type="range" min="000" max="500" step="100" value="0" oninput="showVal(this.value,'s1897','1','single')">
-                <span id="valBoxs18971">Current range is : 0m</span>
+            <div class="image">
+                <image src="images/s1897.png"></image>
             </div>
-            <div class="player">
-                <audio id="audios18971single" controls="controls">
-                    <source id="audioSources18971single" src="audio/s1897-0-1-single.mp3"></source>
-                    Your browser does not support the audio format.
-                </audio>
+            <div class="rightSide">
+                <h1>S1897</h1>
+                </br>
+                </br>
+                Audible Range 0-500m
+                <div class="rangeFinder">
+                    <input type="range" min="000" max="500" step="100" value="0" oninput="showVal(this.value,'s1897','1','single')">
+                    <span id="valBoxs18971">Current range is : 0m</span>
+                </div>
+                <div class="player">
+                    <audio id="audios18971single" controls="controls">
+                        <source id="audioSources18971single" src="audio/s1897-0-1-single.mp3"></source>
+                        Your browser does not support the audio format.
+                    </audio>
+                </div>
             </div>
         </div>
     </div>
+
+    <footer class="footer">
+        <p class="copyright">Andrejs Vasiljevs & Arturs Mjakota © 2018</p>
+    </footer>
 </div>
-
-<footer class="footer">
-    <p class="copyright">Andrejs Vasiljevs & Arturs Mjakota © 2018</p>
-</footer>
-
+</div>
 <script src="js/index.js"></script>
 <link rel="stylesheet" href="css/index.css">
+<link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">

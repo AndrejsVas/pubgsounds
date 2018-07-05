@@ -24,6 +24,7 @@ body {
 }
 
 .container {
+	font-family: 'Lora', serif;
     width:600px;
     height:600px;
     margin: 0;
@@ -32,10 +33,6 @@ body {
     border-width: 1px;
     overflow: hidden;
 
-}
-
-.container .rangeFinder {
-	font-family: 'Lora', serif;
 }
 
 .container .image{

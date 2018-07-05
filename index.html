@@ -23,10 +23,12 @@
 
                         <div>
                             Audible Range 0-300m
-                            <div class="rangeFinder">
+                            <div class="rangeFinder">                              
                                 <input type="range" min="0" max="300" ng-model=main.R45.range step="100" ng-change="main.reloadaudio(main.R45.range,'R45',main.R45.issilenced,main.R45.firemode)">
+                                <br>
                                 <span id="valBoxR45">Current range is : 0m</span>
                             </div>
+                            <br>
                             <div class="player">
                                 <audio id="audioR45" controls="controls">
                                     <source id="audioSourceR45" src="audio/r45-0-1-single.mp3"></source>
@@ -66,8 +68,10 @@
                             Audible Range 0-700m
                             <div class="rangeFinder">
                                 <input type="range" min="100" max="200" ng-model=main.p1911.range step="100" ng-change="main.reloadaudio(main.p1911.range,'p1911',main.p1911.issilenced,main.p1911.firemode)">
+                                <br>
                                 <span id="valBoxp1911">Current range is : 0m</span>
                             </div>
+                            <br>
                             <div class="player">
                                 <audio id="audiop1911" controls="controls">
                                     <source id="audioSourcep1911" src="audio/p1911-100-1-single.mp3"></source>

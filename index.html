@@ -14,23 +14,25 @@
                 <!--*****-->
                 <div class="container">
 
+
                     <div class="image">
                         <image src="images/r45.png"></image>
                     </div>
                     <div class="rightSide">
-                        <h1>R45</h1>
-                        Audible Range 0-300m
-                        <div class="rangeFinder">
-                            <input type="range" min="000" max="300" step="100" value="0" oninput="showVal(this.value,'r45','1','single')">
-							<br>
-                            <span id="valBoxr451">Current range is : 0m</span>
-                        </div>
-						<br>
-                        <div class="player">
-                            <audio id="audior451single" controls="controls">
-                                <source id="audioSourcer451single" src="audio/r45-0-1-single.mp3"></source>
-                                Your browser does not support the audio format.
-                            </audio>
+                        <h1>R45</h1>       
+
+                        <div>
+                            Audible Range 0-300m
+                            <div class="rangeFinder">
+                                <input type="range" min="0" max="300" ng-model=main.R45.range step="100" ng-change="main.reloadaudio(main.R45.range,'R45',main.R45.issilenced,main.R45.firemode)">
+                                <span id="valBoxR45">Current range is : 0m</span>
+                            </div>
+                            <div class="player">
+                                <audio id="audioR45" controls="controls">
+                                    <source id="audioSourceR45" src="audio/r45-0-1-single.mp3"></source>
+                                    Your browser does not support the audio format.
+                                </audio>
+                            </div>
                         </div>
                     </div>
                 </div>

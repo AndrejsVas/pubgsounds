@@ -9,6 +9,12 @@ angular.module('app', [])
         vm.p1911.firemode = "single";
         vm.p1911.range= 0;
         vm.p1911.issilenced = '1';
+		
+		var R45 = new Object();
+        vm.R45=R45;
+        vm.R45.firemode = "single";
+        vm.R45.range= 0;
+        vm.R45.issilenced = '1';
 
 
 

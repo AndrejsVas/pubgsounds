@@ -26,7 +26,7 @@ body {
 .container {
 	font-family: 'Lora', serif;
     width:600px;
-    height:600px;
+    height:310px;
     margin: 0;
     display: flex;
     border-style: solid;

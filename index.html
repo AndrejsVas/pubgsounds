@@ -1,4 +1,4 @@
-<body ng-app="app" ng-controller="maincontroller as main">
+<body id="mainwrap" ng-app="app" ng-controller="maincontroller as main">
     <div class="bg">
         <div class="main">
         <!-- ******************************************************************************* -->
@@ -46,18 +46,27 @@
                     </div>
                     <div class="rightSide">
                         <h1>P1911</h1>
+
                         <form>
                             <label>Unsilenced</label>
                             <input type="radio" ng-model="main.content" value=true>
                             <label>Silenced</label>
                             <input type="radio" ng-model="main.content" value=false>
                         </form>
+
+                        <form>
+                            <label>Single</label>
+                            <input type="radio" ng-model="main.p1911.firemode" value="single" ng-change="main.huj()" >
+                            <label>Auto</label>
+                            <input type="radio" ng-model="main.p1911.firemode" value="auto" ng-change="main.huj()" >
+                        </form>
+
                         <div ng-show="main.isSilenced()" class="ng-hide">
-                            <!--<h2>Unsilenced</h2>-->
+                         <!--   <h2>Unsilenced</h2>-->
                             Audible Range 0-700m
                             <div class="rangeFinder">
-                                <input type="range" min="000" max="1000" step="100" oninput="showVal(this.value,'p1911','1','single')" onchange="showVal(this.value,'p92')">
-                                <span id="valBoxp19111">Current range is : 500m</span>
+                                <input type="range" min="000" max="1000" ng-model=main.p1911.range step="100" ng-change="main.reloadauidio(main.p1911.range,'p1911','1',main.p1911.firemode)">
+                                <span id="valBoxp19111">Current range is : 0m</span>
                             </div>
                             <div class="player">
                                 <audio id="audiop19111single" controls="controls">
@@ -66,11 +75,11 @@
                                 </audio>
                             </div>
                         </div>
-                        <div ng-show="!main.isSilenced()" class="ng-hide">
-                            <!--<h2>Silenced</h2>-->
+<!--                        <div ng-show="!main.isSilenced()" class="ng-hide">
+                            <h2>Silenced</h2>
                             Audible Range 0-300m
                             <div class="rangeFinder">
-                                <input type="range" min="000" max="1000" step="100" oninput="showVal(this.value,'p1911','2','single')" onchange="showVal(this.value,'p92')">
+                                <input type="range" min="000" max="1000" value="0" step="100" oninput="showVal(this.value,'p1911','2','single')">
                                 <span id="valBoxp19112">Current range is : 500m</span>
                             </div>
                             <div class="player">
@@ -79,48 +88,7 @@
                                     Your browser does not support the audio format.
                                 </audio>
                             </div>
-                        </div>
-
-                    </div>
-
-
-                </div>
-                <!--*****-->
-                <!--p1911-->
-                <!--*****-->
-                <div class="container">
-
-
-                    <div class="image">
-                        <image src="images/p1911.png"></image>
-                    </div>
-                    <div class="rightSide">
-                        <h1>P1911</h1>
-                        <h2>Unsilenced</h2>
-                        Audible Range 0-700m
-                        <div class="rangeFinder">
-                            <input type="range" min="000" max="1000" step="100" oninput="showVal(this.value,'p1911','1','single')" onchange="showVal(this.value,'p92')">
-                            <span id="valBoxp19111">Current range is : 500m</span>
-                        </div>
-                        <div class="player">
-                            <audio id="audiop19111single" controls="controls">
-                                <source id="audioSourcep19111single" src="audio/p1911-100-1-single.mp3"></source>
-                                Your browser does not support the audio format.
-                            </audio>
-                        </div>
-
-                        <h2>Silenced</h2>
-                        Audible Range 0-300m
-                        <div class="rangeFinder">
-                            <input type="range" min="000" max="1000" step="100" oninput="showVal(this.value,'p1911','2','single')" onchange="showVal(this.value,'p92')">
-                            <span id="valBoxp19112">Current range is : 500m</span>
-                        </div>
-                        <div class="player">
-                            <audio id="audiop19112single" controls="controls">
-                                <source id="audioSourcep19112single" src="audio/p1911-100-1-single.mp3"></source>
-                                Your browser does not support the audio format.
-                            </audio>
-                        </div>
+                        </div>-->
 
                     </div>
 

@@ -1,4 +1,4 @@
 ump 325 silenced 100
 p18c 350 silenced 100
 s1897 500 
-r45
+r45 300

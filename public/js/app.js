@@ -4,7 +4,7 @@ angular.module('app', [])
 
 		var vm = this;
         vm.content = "true";
-
+        vm.weapons={};
 
 
 		vm.init = function() {
@@ -12,7 +12,7 @@ angular.module('app', [])
 			var i;
 			for (i = 0; i < weapons.length; i++) {
 				eval(weapons[i] + " = new Object()");
-				eval("vm." + weapons[i] + " = eval(weapons[i])");
+				eval("vm.weapons." + weapons[i] + " = eval(weapons[i])");
 				eval(weapons[i]).firemode = "single";
 				eval(weapons[i]).range = 0;
 				eval(weapons[i]).issilenced = '0';

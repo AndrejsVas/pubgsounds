@@ -1,6 +1,6 @@
 
 angular.module('app', [])
-    .controller('maincontroller' , function($scope){
+    .controller('maincontroller' , function(){
 
 		var vm = this;
         vm.content = "true";
@@ -8,7 +8,8 @@ angular.module('app', [])
 		var weapons = ["P1911", "R45", "R1895", "P92", "P18C", "SAWED_OFF", "S12K", "S1897", "S686", "MICRO_UZI", "KRISS_VECTOR", "UMP9", "TOMMY_GUN", "M16A4", "M416", "QBZ95", "SCAR_L", "AKM", "VSS", "MINI14", "SKS", "SLR", "WIN94", "KARABINER_98_KURZ", "M24", "DP_28"];																					
 
 
-		$scope.init = function() {
+		vm.init = function() {
+		    console.log("funkcija vizivaetsja");
 			var weapons = ["P1911", "R45", "R1895", "P92", "P18C", "SAWED_OFF", "S12K", "S1897", "S686", "MICRO_UZI", "KRISS_VECTOR", "UMP9", "TOMMY_GUN", "M16A4", "M416", "QBZ95", "SCAR_L", "AKM", "VSS", "MINI14", "SKS", "SLR", "WIN94", "KARABINER_98_KURZ", "M24", "DP_28"];																				
 			var i;
 			for (i = 0; i < weapons.length; i++) {
@@ -19,9 +20,9 @@ angular.module('app', [])
 				eval(weapons[i]).issilenced = '0';
 			}
 			console.log(eval(weapons[0]).issilenced);
-		}
+		};
 
-		$scope.init();
+		vm.init();
 
 
         vm.redrawreload = function(range,weaponname , issilenced , firemode,rangemin,rangemax){

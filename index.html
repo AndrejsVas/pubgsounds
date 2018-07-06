@@ -52,16 +52,16 @@
 
                         <form>
                             <label>Unsilenced</label>
-                            <input type="radio" ng-model="main.P1911.issilenced" value='0'  ng-change="main.redrawReload(main.P1911.range,'P1911',main.P1911.issilenced,main.P1911.firemode,'0','600')">
+                            <input type="radio" ng-model="main.weapons.P1911.issilenced" value='0'  ng-change="main.redrawreload(main.weapons.P1911.range,'P1911',main.weapons.P1911.issilenced,main.weapons.P1911.firemode,'0','600')">
                             <label>Silenced</label>
-                            <input type="radio" ng-model="main.P1911.issilenced" value='1' ng-change="main.redrawReload(main.P1911.range,'P1911',main.P1911.issilenced,main.P1911.firemode,'0','300')">
+                            <input type="radio" ng-model="main.weapons.P1911.issilenced" value='1' ng-change="main.redrawreload(main.weapons.P1911.range,'P1911',main.weapons.P1911.issilenced,main.weapons.P1911.firemode,'0','300')">
                         </form>
 
                         <form>
                             <label>Single</label>
-                            <input type="radio" ng-model="main.P1911.firemode" value="single"  ng-change="main.reloadAudio(main.P1911.range,'P1911',main.P1911.issilenced,main.P1911.firemode)">
+                            <input type="radio" ng-model="main.weapons.P1911.firemode" value="single"  ng-change="main.reloadaudio(main.weapons.P1911.range,'P1911',main.weapons.P1911.issilenced,main.weapons.P1911.firemode)">
                             <label>Auto</label>
-                            <input type="radio" ng-model="main.P1911.firemode" value="auto" ng-change="main.reloadAudio(main.P1911.range,'P1911',main.P1911.issilenced,main.P1911.firemode)" >
+                            <input type="radio" ng-model="main.weapons.P1911.firemode" value="auto" ng-change="main.reloadaudio(main.weapons.P1911.range,'P1911',main.weapons.P1911.issilenced,main.weapons.P1911.firemode)" >
                         </form>
 
                         <div>
@@ -70,7 +70,7 @@
 
                             <!--Unsilenced-->
                             <div class="rangeFinder">
-                                <input id="weapon1" type="range" min="0" max="600" ng-model=main.P1911.range step="100" ng-change="main.reloadAudio(main.P1911.range,'P1911',main.P1911.issilenced,main.P1911.firemode)">
+                                <input id="weapon1" type="range" min="0" max="600" ng-model=main.weapons.P1911.range step="100" ng-change="main.reloadaudio(main.weapons.P1911.range,'P1911',main.weapons.P1911.issilenced,main.weapons.P1911.firemode)">
                                 <br>
                                 <span id="valBoxP1911">Current range : 0m</span>
                             </div>

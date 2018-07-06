@@ -15,8 +15,9 @@ angular.module('app', [])
 				eval("vm." + weapons[i] + " = eval(weapons[i])");
 				eval(weapons[i]).firemode = "single";
 				eval(weapons[i]).range = 0;
-				eval(weapons[i]).issilenced = '1';
+				eval(weapons[i]).issilenced = '0';
 			}
+			console.log(eval(weapons[0]).issilenced);
 		}
 
 		$scope.init();

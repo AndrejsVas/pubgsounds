@@ -20,10 +20,7 @@ angular.module('app', [])
                 eval(weapons[i]).minRange = 0;
                 eval(weapons[i]).maxRangeUnsilenced = weaponRangeUnsilenced[i];
                 eval(weapons[i]).maxRangeSilenced = weaponRangeSilenced[i];
-
-
                 eval(weapons[i]).issilenced = '0';
-                vm.weapons[i] = eval(weapons[i]);
             }
 		};
 

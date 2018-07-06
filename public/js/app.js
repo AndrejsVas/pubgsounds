@@ -38,6 +38,7 @@ angular.module('app', [])
         vm.redrawRange = function(rangemin, rangemax){
             angular.element( document.querySelector("#weapon1"))[0].min=rangemin;
             angular.element( document.querySelector("#weapon1"))[0].max=rangemax;
+            angular.element( document.querySelector("#audibleRange"))[0].innerHTML="Audible range 0-"+rangemax;
         };
         vm.reloadAudio = function(rangeBar, weaponname , issilenced , firemode){
 

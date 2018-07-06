@@ -68,13 +68,13 @@ input[type=range]{
 /*    box-shadow: 0 1px 1px 4px rgba(0, 0, 0, 0.4);*/
     box-sizing: border-box;
     text-align: center;
-    background-color: #292c2f;
+    background-color: #404040;
     height:120px;
     width:100%;
     font: normal 18px sans-serif;
 }
 .footer .copyright{
-    color:  #8f9296;
+    color:  #ff9900;
     font-size: 14px;
     margin : 0;
 

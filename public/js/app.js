@@ -22,16 +22,16 @@ angular.module('app', [])
 		vm.init();
 
 
-        vm.redrawreload = function(range,weaponname , issilenced , firemode,rangemin,rangemax){
-            vm.reloadaudio(range,weaponname,issilenced,firemode);
-            vm.redrawrange(rangemin,rangemax);
+        vm.redrawReload = function(range, weaponname , issilenced , firemode, rangemin, rangemax){
+            vm.reloadAudio(range,weaponname,issilenced,firemode);
+            vm.redrawRange(rangemin,rangemax);
         };
 
-        vm.redrawrange = function(rangemin,rangemax){
+        vm.redrawRange = function(rangemin, rangemax){
             angular.element( document.querySelector("#weapon1"))[0].min=rangemin;
             angular.element( document.querySelector("#weapon1"))[0].max=rangemax;
         };
-        vm.reloadaudio = function(range,weaponname , issilenced , firemode){
+        vm.reloadAudio = function(range, weaponname , issilenced , firemode){
 
             angular.element( document.querySelector("#valBox"+weaponname))[0].innerHTML='Current range is : '+range+'m';
             var audio =angular.element( document.querySelector('#audio'+weaponname))[0];

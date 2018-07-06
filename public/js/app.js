@@ -28,6 +28,8 @@ angular.module('app', [])
 
 
         vm.redrawReload = function(rangeBar, weaponname , issilenced , firemode, rangemin, rangemax){
+            vm.weapons[weaponname].rangeBar = 0;
+            rangeBar = 0;
             vm.reloadAudio(rangeBar,weaponname,issilenced,firemode);
             vm.redrawRange(rangemin,rangemax);
         };

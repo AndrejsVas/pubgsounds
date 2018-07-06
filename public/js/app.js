@@ -1,21 +1,26 @@
 
 angular.module('app', [])
     .controller('maincontroller' , function($scope){
-        var vm = this;
+
+		var vm = this;
         vm.content = "true";
 
-        var p1911 = new Object();
-        vm.p1911=p1911;
-        vm.p1911.firemode = "single";
-        vm.p1911.range= 0;
-        vm.p1911.issilenced = '1';
-		
-		var R45 = new Object();
-        vm.R45=R45;
-        vm.R45.firemode = "single";
-        vm.R45.range= 0;
-        vm.R45.range2= 0;
-        vm.R45.issilenced = '1';
+		var weapons = ['p1911', 'R45'];
+
+		$scope.init = function() {
+			var weapons = ["p1911", "R45"];
+			var i;
+			for (i = 0; i < weapons.length; i++) {
+				eval(weapons[i] + " = new Object()");
+				eval("vm." + weapons[i] + " = eval(weapons[i])");
+				eval(weapons[i]).firemode = "single";
+				eval(weapons[i]).range = 0;
+				eval(weapons[i]).issilenced = '1';
+			}
+		}
+
+		$scope.init();
+
 
         vm.redrawreload = function(range,weaponname , issilenced , firemode,rangemin,rangemax){
             vm.reloadaudio(range,weaponname,issilenced,firemode);

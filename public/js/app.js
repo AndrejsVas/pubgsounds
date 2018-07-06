@@ -17,7 +17,6 @@ angular.module('app', [])
 				eval(weapons[i]).range = 0;
 				eval(weapons[i]).issilenced = '0';
 			}
-			console.log(eval(weapons[0]).issilenced);
 		};
 
 		vm.init();

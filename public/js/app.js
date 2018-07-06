@@ -41,7 +41,7 @@ angular.module('app', [])
         };
         vm.reloadAudio = function(rangeBar, weaponname , issilenced , firemode){
 
-            angular.element( document.querySelector("#valBox"+weaponname))[0].innerHTML='Current rangeBar is : '+rangeBar+'m';
+            angular.element( document.querySelector("#valBox"+weaponname))[0].innerHTML='Current range is : '+rangeBar+'m';
             var audio =angular.element( document.querySelector('#audio'+weaponname))[0];
             var source = angular.element( document.querySelector('#audioSource'+weaponname))[0];
             source.src = 'audio/'+weaponname+'-'+rangeBar+'-'+issilenced+'-'+firemode+'.mp3';

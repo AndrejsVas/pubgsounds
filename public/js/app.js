@@ -5,10 +5,10 @@ angular.module('app', [])
 		var vm = this;
         vm.content = "true";
 
-		var weapons = ['p1911', 'R45'];
+		var weapons = ['P1911', 'R45'];
 
 		$scope.init = function() {
-			var weapons = ["p1911", "R45"];
+			var weapons = ["P1911", "R45", "R1895", "P92", "P18C"];
 			var i;
 			for (i = 0; i < weapons.length; i++) {
 				eval(weapons[i] + " = new Object()");

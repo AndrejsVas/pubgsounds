@@ -45,23 +45,23 @@
 
 
                     <div class="image">
-                        <image src="images/p1911.png"></image>
+                        <image src="images/P1911.png"></image>
                     </div>
                     <div class="rightSide">
                         <h1>P1911</h1>
 
                         <form>
                             <label>Unsilenced</label>
-                            <input type="radio" ng-model="main.p1911.issilenced" value='0'  ng-change="main.redrawreload(main.p1911.range,'p1911',main.p1911.issilenced,main.p1911.firemode,'0','600')">
+                            <input type="radio" ng-model="main.P1911.issilenced" value='0'  ng-change="main.redrawreload(main.P1911.range,'P1911',main.P1911.issilenced,main.P1911.firemode,'0','600')">
                             <label>Silenced</label>
-                            <input type="radio" ng-model="main.p1911.issilenced" value='1' ng-change="main.redrawreload(main.p1911.range,'p1911',main.p1911.issilenced,main.p1911.firemode,'0','300')">
+                            <input type="radio" ng-model="main.P1911.issilenced" value='1' ng-change="main.redrawreload(main.P1911.range,'P1911',main.P1911.issilenced,main.P1911.firemode,'0','300')">
                         </form>
 
                         <form>
                             <label>Single</label>
-                            <input type="radio" ng-model="main.p1911.firemode" value="single"  ng-change="main.reloadaudio(main.p1911.range,'p1911',main.p1911.issilenced,main.p1911.firemode)">
+                            <input type="radio" ng-model="main.P1911.firemode" value="single"  ng-change="main.reloadaudio(main.P1911.range,'P1911',main.P1911.issilenced,main.P1911.firemode)">
                             <label>Auto</label>
-                            <input type="radio" ng-model="main.p1911.firemode" value="auto" ng-change="main.reloadaudio(main.p1911.range,'p1911',main.p1911.issilenced,main.p1911.firemode)" >
+                            <input type="radio" ng-model="main.P1911.firemode" value="auto" ng-change="main.reloadaudio(main.P1911.range,'P1911',main.P1911.issilenced,main.P1911.firemode)" >
                         </form>
 
                         <div>
@@ -70,15 +70,15 @@
 
                             <!--Unsilenced-->
                             <div class="rangeFinder">
-                                <input id="weapon1" type="range" min="0" max="600" ng-model=main.p1911.range step="100" ng-change="main.reloadaudio(main.p1911.range,'p1911',main.p1911.issilenced,main.p1911.firemode)">
+                                <input id="weapon1" type="range" min="0" max="600" ng-model=main.P1911.range step="100" ng-change="main.reloadaudio(main.P1911.range,'P1911',main.P1911.issilenced,main.P1911.firemode)">
                                 <br>
-                                <span id="valBoxp1911">Current range : 0m</span>
+                                <span id="valBoxP1911">Current range : 0m</span>
                             </div>
 
                             <br>
                             <div class="player">
-                                <audio id="audiop1911" controls="controls">
-                                    <source id="audioSourcep1911" src="audio/p1911-100-0-single.mp3"></source>
+                                <audio id="audioP1911" controls="controls">
+                                    <source id="audioSourceP1911" src="audio/P1911-100-0-single.mp3"></source>
                                     Your browser does not support the audio format.
                                 </audio>
                             </div>

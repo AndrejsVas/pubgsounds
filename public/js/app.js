@@ -3,13 +3,14 @@ angular.module('app', [])
 
         var vm = this;
         vm.weapons = [];
+		vm.weaponCategories = ["Pistols", "Shotguns", "Submachine guns", "Assault rifles", "Designated marksman rifles", "Sniper rifles", "Light machine guns"];
 
 
         vm.init = function () {
-            var weapons = ["M416", "R45"]
+            var weapons = ["M416", "M416"]
             /*"R1895", "P92", "P18C", "SAWED_OFF", "S12K", "S1897", "S686", "MICRO_UZI", "KRISS_VECTOR", "UMP9", "TOMMY_GUN", "M16A4", "M416", "QBZ95", "SCAR_L", "AKM", "VSS", "MINI14", "SKS", "SLR", "WIN94", "KARABINER_98_KURZ", "M24", "DP_28"];																				*/
-            var weaponRangeUnsilenced = ["600", "100"];
-            var weaponRangeSilenced = ["300", "100"];
+            var weaponRangeUnsilenced = ["600", "600"];
+            var weaponRangeSilenced = ["300", "300"];
             var weaponCategory = ["ar", "pistol"];
 /*          Variable to help html determine what kind of silencer the weapon has
             1- only unsilenced

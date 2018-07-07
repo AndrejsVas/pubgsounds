@@ -1,11 +1,9 @@
 <body id="mainwrap" ng-app="app" ng-controller="maincontroller as main">
     <div class="bg">
         <div class="main">
-            <div class="weaponcategory">
-        <!-- ******************************************************************************* -->
-        <!-- *********************************** PISTOLS *********************************** -->
-        <!-- ******************************************************************************* -->
-                <h1 class="categoryheader">Pistols</h1>
+            <div class="weaponcategory" ng-repeat="category in main.weaponCategories">
+			
+                <h1 class="categoryheader">{{category}}</h1>
                 <div class="category" >
 
 

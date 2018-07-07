@@ -3,7 +3,7 @@ angular.module('app', [])
 
         var vm = this;
         vm.weapons = [];
-		vm.weaponCategories = ["Pistols", "Shotguns", "Submachine guns", "Assault rifles", "Designated marksman rifles", "Sniper rifles", "Light machine guns"];
+		vm.weaponCategories = ["Pistols", "Shotguns", "Submachine guns", "Assault rifles", "Designated marksman rifles", "Sniper rifles", "Light machine guns", "Miscellaneous"];
 
 
         vm.init = function () {

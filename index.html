@@ -29,6 +29,10 @@
                                     <label>Auto</label>
                                     <input type="radio" ng-model="weapon.firemode" value="auto" ng-change="main.reloadAudio(weapon)" >
                                 </div>
+								<div class="radio" ng-if="(weapon.weaponFireModes === 4||weapon.weaponFireModes === 5)">
+                                    <label>Burst</label>
+                                    <input type="radio" ng-model="weapon.firemode" value="burst" ng-change="main.reloadAudio(weapon)" >
+                                </div>
                             </form>
 
                             <div>
@@ -54,6 +58,13 @@
 
             <footer class="footer">
                 <p class="copyright">Andrejs Vasiljevs & Arturs Mjakota © 2018</p>
+				<br>
+				<p class="legal_terms">
+					Pubgsounds is not associated with PLAYERUNKNOWN'S BATTLEGROUNDS, Bluehole Inc, Steam or Valve Corp.
+					<br>
+					PLAYERUNKNOWN'S BATTLEGROUNDS is a registered trademark, trademark or service mark of Bluehole, Inc. and its affiliates.
+				</p>
+				<br>
             </footer>
         </div>
     </div>

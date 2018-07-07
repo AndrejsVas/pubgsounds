@@ -72,7 +72,7 @@ input[type=range]{
     box-sizing: border-box;
     text-align: center;
     background-color: #404040;
-    height:120px;
+    height:150px;
     width:100%;
     font: normal 18px sans-serif;
 }
@@ -80,8 +80,16 @@ input[type=range]{
     color:  #ff9900;
     font-size: 14px;
     margin : 0;
-
 }
+
+.footer .legal_terms{
+    color:  #777474;
+    font-size: 14px;
+    margin : 0;
+	text-align: left;
+}
+
+
 @media (max-width: 860px){
     .main {
         margin : 0px;

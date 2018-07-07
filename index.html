@@ -7,7 +7,7 @@
                 <div class="category" >
 
 
-                    <div class="container" ng-repeat="weapon in main.weapons">
+                    <div class="container" ng-repeat="weapon in main.weapons | filter: { weaponCategory: category }">
                         <div class="image">
                             <image src="images/{{weapon.weaponName}}.png"></image>
                         </div>

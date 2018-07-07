@@ -11,6 +11,18 @@ angular.module('app', [])
             var weaponRangeUnsilenced = ["300", "100"];
             var weaponRangeSilenced = ["100", "100"];
             var weaponCategory = ["pistol", "pistol"];
+/*            Variable to help html determine what kind of silencer the weapon has
+            1- only unsilenced
+            2- silenced + unsilenced
+            3 - only silenced*/
+            var weaponSilencedType = [2 , 1];
+/*            Variable to determine what kind of firemodes the weapon has
+            1 - only single
+            2 - single + auto
+            3- only auto
+            4 - single + burst  +auto
+            5 - single + burst*/
+            var weaponFireModes = [2,1];
             var i;
             for (i = 0; i < weapons.length; i++) {
                 eval(weapons[i] + " = new Object()");
@@ -22,6 +34,9 @@ angular.module('app', [])
                 eval(weapons[i]).maxRangeSilenced = weaponRangeSilenced[i];
                 eval(weapons[i]).issilenced = '0';
                 eval(weapons[i]).weaponCategory = weaponCategory[i];
+                eval(weapons[i]).weaponSilencedType = weaponSilencedType[i];
+                eval(weapons[i]).weaponFireModes = weaponFireModes[i];
+
             }
         };
 
@@ -32,17 +47,17 @@ angular.module('app', [])
             vm.weapons[weaponname].rangeBar = 0;
             rangeBar = 0;
             vm.reloadAudio(rangeBar, weaponname, issilenced, firemode);
-            vm.redrawRange(rangemin, rangemax);
+            vm.redrawRange(rangemin, rangemax,weaponname);
         };
 
-        vm.redrawRange = function (rangemin, rangemax) {
-            angular.element(document.querySelector("#weapon1"))[0].min = rangemin;
-            angular.element(document.querySelector("#weapon1"))[0].max = rangemax;
-            angular.element(document.querySelector("#audibleRange"))[0].innerHTML = "Audible range 0-" + rangemax;
+        vm.redrawRange = function (rangemin, rangemax,weaponName) {
+            angular.element(document.querySelector("#"+weaponName+"RangeBar"))[0].min = rangemin;
+            angular.element(document.querySelector("#"+weaponName+"RangeBar"))[0].max = rangemax;
+            angular.element(document.querySelector("#"+weaponName+"AudibleRange"))[0].innerHTML = "Audible range 0-" + rangemax;
         };
         vm.reloadAudio = function (rangeBar, weaponname, issilenced, firemode) {
 
-            angular.element(document.querySelector("#valBox" + weaponname))[0].innerHTML = 'Current range is : ' + rangeBar + 'm';
+            angular.element(document.querySelector("#rangeBox" + weaponname))[0].innerHTML = 'Current range is : ' + rangeBar + 'm';
             var audio = angular.element(document.querySelector('#audio' + weaponname))[0];
             var source = angular.element(document.querySelector('#audioSource' + weaponname))[0];
             source.src = 'audio/' + weaponname + '-' + rangeBar + '-' + issilenced + '-' + firemode + '.mp3';

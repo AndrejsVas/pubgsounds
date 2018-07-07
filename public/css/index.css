@@ -57,6 +57,9 @@ body {
     /*width:300px;*/
     text-align: center;
 }
+.radio{
+    display:inline-block;
+}
 input[type=range]{
     width:100%;
 }

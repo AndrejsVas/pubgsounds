@@ -8,34 +8,16 @@
             <div class ="category">
 
 
-
-                <!--*****-->
-                <!--r45---->
-                <!--*****-->
-                <div class="container">
-
-
+                <div class="container" ng-repeat="(weaponName ,weapon) in main.weapons">
                     <div class="image">
-                        <image src="images/r45.png"></image>
+                        <image src="images/{{weaponName}}.png"></image>
                     </div>
                     <div class="rightSide">
-                        <h1>R45</h1>       
 
-                        <div>
-                            Audible Range 0-300m
-                            <div class="rangeFinder">                              
-                                <input type="range" min="0" max="300" ng-model="main.R45.rangeBar" step="100" ng-change="main.reloadAudio(main.R45.rangeBar,'R45',main.R45.issilenced,main.R45.firemode)">
-                                <br>
-                                <span id="valBoxR45">Current rangeBar is : 0m</span>
-                            </div>
-                            <br>
-                            <div class="player">
-                                <audio id="audioR45" controls="controls">
-                                    <source id="audioSourceR45" src="audio/r45-0-0-single.mp3"></source>
-                                    Your browser does not support the audio format.
-                                </audio>
-                            </div>
-                        </div>
+                    </div>
+                    <div>
+                        <div class="rangeFinder"></div>
+                        <div class="player"></div>
                     </div>
                 </div>
                 <!--*****-->

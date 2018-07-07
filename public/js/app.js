@@ -8,7 +8,7 @@ angular.module('app', [])
 
         vm.init = function () {
             var weapons = ["M416", "R45", "M16A4"]
-            /*"R1895", "P92", "P18C", "SAWED_OFF", "S12K", "S1897", "S686", "MICRO_UZI", "KRISS_VECTOR", "UMP9", "TOMMY_GUN", "M16A4", "M416", "QBZ95", "SCAR_L", "AKM", "VSS", "MINI14", "SKS", "SLR", "WIN94", "KARABINER_98_KURZ", "M24", "DP_28"];																				*/
+            /*"R1895", "P92", "P18C", "SAWED_OFF", "S12K", "S1897", "S686", "MICRO_UZI", "KRISS_VECTOR", "UMP9", "TOMMY_GUN", "M16A4", "M416", "QBZ95", "SCAR_L", "AKM", "VSS", "MINI14", "SKS", "SLR", "WIN94", "KARABINER_98_KURZ", "M24", "DP_28" , "CROSSBOW];																				*/
             var weaponRangeUnsilenced = ["600", "300", "400"];
             var weaponRangeSilenced = ["300", "0", "200"];
             var weaponCategory = ["Assault rifles", "Pistols", "Assault rifles"];

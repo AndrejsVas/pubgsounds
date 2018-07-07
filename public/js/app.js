@@ -3,7 +3,6 @@ angular.module('app', [])
     .controller('maincontroller' , function(){
 
 		var vm = this;
-        vm.content = "true";
         vm.weapons={};
 
 

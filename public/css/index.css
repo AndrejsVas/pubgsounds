@@ -87,11 +87,12 @@ input[type=range]{
 	text-align: left;
 }
 
-
-@media (max-width: 860px){
-    .main {
-        margin : 0px;
+@media (max-width: 1333px){
+    .categoryheader{
+        font-size:50px;
     }
+}
+@media (max-width: 860px){
     .categoryheader{
         font-size:40px;
     }

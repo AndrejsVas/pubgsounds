@@ -7,23 +7,22 @@ angular.module('app', [])
 
 
         vm.init = function () {
-            var weapons = ["M416", "R45", "M16A4"]
-            /*"R1895", "P92", "P18C", "SAWED_OFF", "S12K", "S1897", "S686", "MICRO_UZI", "KRISS_VECTOR", "UMP9", "TOMMY_GUN", "M16A4", "M416", "QBZ95", "SCAR_L", "AKM", "VSS", "MINI14", "SKS", "SLR", "WIN94", "KARABINER_98_KURZ", "M24", "DP_28" , "CROSSBOW];																				*/
+            var weapons = ["R1895", "P92", "P18C", "R45", "P1911", "SAWED OFF", "S12K", "S1897", "S686", "MICRO UZI", "KRISS VECTOR", "UMP9", "TOMMY GUN", "M16A4", "M416", "QBZ95", "SCAR-L", "AKM", "VSS", "MINI14", "SKS", "SLR", "WIN94", "KARABINER 98 KURZ", "M24", "DP 28" , "CROSSBOW"];           																		
             var weaponRangeUnsilenced = ["600", "300", "400"];
             var weaponRangeSilenced = ["300", "0", "200"];
-            var weaponCategory = ["Assault rifles", "Pistols", "Assault rifles"];
+            var weaponCategory = ["Pistols", "Pistols", "Pistols", "Pistols", "Pistols", "Shotguns", "Shotguns", "Shotguns", "Shotguns", "Submachine guns", "Submachine guns", "Submachine guns", "Submachine guns", "Assault rifles", "Assault rifles", "Assault rifles", "Assault rifles", "Assault rifles", "Designated marksman rifles", "Designated marksman rifles", "Designated marksman rifles", "Designated marksman rifles", "Sniper rifles", "Sniper rifles", "Sniper rifles", "Light machine guns", "Miscellaneous"];
 /*          Variable to help html determine what kind of silencer the weapon has
-            1- only unsilenced
-            2- silenced + unsilenced
+            1 - only unsilenced
+            2 - silenced + unsilenced
             3 - only silenced*/
-            var weaponSilencedType = [2 , 1,  2];
+            var weaponSilencedType = [2, 2, 2, 1, 2, 1, 2, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 2, 2, 2, 1, 2, 2, 1, 1];
 /*          Variable to determine what kind of firemodes the weapon has
             1 - only single
             2 - single + auto
-            3- only auto
-            4 - single + burst  +auto
+            3 - only auto
+            4 - single + burst + auto
             5 - single + burst*/
-            var weaponFireModes = [2,1,5];
+            var weaponFireModes = [1, 1, 2, 1, 1, 1, 1, 1, 1, 2, 4, 4, 2, 5, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 3, 1];
             var i;
             for (i = 0; i < weapons.length; i++) {
 				vm.weapons[i] = new Object();

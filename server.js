@@ -27,7 +27,3 @@ var port = process.env.PORT || 8000
 app.listen(port, function() {
     console.log("App is running on port " + port);
 });
-/*
-app.listen(config.port);
-console.log('Application started at port ' + config.port);
-*/

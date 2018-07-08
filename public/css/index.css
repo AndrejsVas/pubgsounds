@@ -1,5 +1,5 @@
 .bg {
-    background-color: #000000;
+    background-color: #0b0b0bf2;
 }
 body {
     margin : 0;
@@ -91,5 +91,8 @@ input[type=range]{
 @media (max-width: 860px){
     .main {
         margin : 0px;
+    }
+    .categoryheader{
+        font-size:40px;
     }
 }

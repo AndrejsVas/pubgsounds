@@ -23,15 +23,15 @@
                             <form ng-if="(weapon.weaponFireModes === 2||weapon.weaponFireModes === 4||weapon.weaponFireModes === 5)">
                                 <div class="radio" ng-if="(weapon.weaponFireModes === 1||weapon.weaponFireModes === 2||weapon.weaponFireModes === 4||weapon.weaponFireModes === 5)">
                                     <label>Single</label>
-                                    <input type="radio" ng-model="weapon.firemode" value="single"  ng-change="main.reloadAudio(weapon)">
+                                    <input type="radio" ng-model="weapon.firemode" value="single"  ng-change="main.redrawReload(weapon)">
                                 </div>
                                 <div class="radio" ng-if="(weapon.weaponFireModes === 2||weapon.weaponFireModes === 3||weapon.weaponFireModes === 4)">
                                     <label>Auto</label>
-                                    <input type="radio" ng-model="weapon.firemode" value="auto" ng-change="main.reloadAudio(weapon)" >
+                                    <input type="radio" ng-model="weapon.firemode" value="auto" ng-change="main.redrawReload(weapon)" >
                                 </div>
 								<div class="radio" ng-if="(weapon.weaponFireModes === 4||weapon.weaponFireModes === 5)">
                                     <label>Burst</label>
-                                    <input type="radio" ng-model="weapon.firemode" value="burst" ng-change="main.reloadAudio(weapon)" >
+                                    <input type="radio" ng-model="weapon.firemode" value="burst" ng-change="main.redrawReload(weapon)" >
                                 </div>
                             </form>
 

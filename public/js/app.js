@@ -45,7 +45,9 @@ angular.module('app', [])
         vm.redrawReload = function (weapon, isSilenced) {
             weapon.rangeBar = 0;
             vm.reloadAudio(weapon);
-            vm.redrawRange(weapon, isSilenced);
+            if (typeof isSilenced != 'undefined'){
+                vm.redrawRange(weapon, isSilenced);
+            }
         };
 
         vm.redrawRange = function (weapon, isSilenced) {

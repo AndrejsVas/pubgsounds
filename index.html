@@ -36,7 +36,8 @@
                             </form>
 
                             <div>
-                                <p id="{{weapon.weaponName}}AudibleRange">Audible Range 0-{{weapon.maxRangeUnsilenced}}</p>
+                                <p id="{{weapon.weaponName}}AudibleRange" ng-if="(weapon.maxRangeUnsilenced !== '0')">Audible Range : 0-{{weapon.maxRangeUnsilenced}}m </p>
+                                <p id="{{weapon.weaponName}}AudibleRange1" ng-if="(weapon.maxRangeUnsilenced == '0')">Audible Range : {{weapon.maxRangeUnsilenced}}m </p>
                                 <div class="rangeFinder">
                                     <input id="{{weapon.weaponName}}RangeBar" type="range" min={{weapon.minRange}} max={{weapon.maxRangeUnsilenced}} ng-model="weapon.rangeBar" step="100" ng-change="main.reloadAudio(weapon)">
                                     <br>

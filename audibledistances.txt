@@ -3,3 +3,8 @@ p18c 350 silenced 100
 s1897 500 
 r45 300
 m416 550 silenced 300
+colt 400 silenced 100
+mini 500 silenced 300
+scarl silenced 300
+s686 800
+crossbow 100

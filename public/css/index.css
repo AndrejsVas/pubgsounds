@@ -1,8 +1,40 @@
 .bg {
     background-color: #0b0b0bf2;
+    overflow:auto;
+    display:inline-block;
 }
 body {
     margin : 0;
+}
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+
+}
+.topnav #logo{
+    text-align:center;
+}
+#header {
+    margin-left: 11% ;
+    margin-right: 11% ;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    box-sizing: border-box;
+}
+#disclaimerText{
+    margin: 0;
+}
+#disclaimerWraper{
+    margin-top: 0px;
+    background-color: #ffffff;
+
+}
+.disclaimer {
+    background-color: #ffffff;
+    margin: 0 auto;
+    width: 30%;
+    text-align:center;
+
 }
 .main{
     background-color: white;
@@ -86,7 +118,6 @@ input[type=range]{
     margin : 0;
 	text-align: left;
 }
-
 @media (max-width: 1333px){
     .categoryheader{
         font-size:50px;

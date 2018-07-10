@@ -1,6 +1,21 @@
 <body id="mainwrap" ng-app="app" ng-controller="maincontroller as main">
     <div class="bg">
+            <div id="header">
+                <div class="topnav">
+                    <div id="logo">
+                        <image src="images/pubgsoundslogo.png"></image>
+                    </div>
+                </div>
+
+            </div>
         <div class="main">
+            <div id="disclaimerWraper">
+                <div class="disclaimer">
+                    <p id="disclaimerText">All audio recordings have been made ingame and some of the maximum audible ranges could be barely audible
+                        and may require adjusting your volume. The background noise present in the sound recordings is part of the
+                        ingame audio background and cannot be removed without affecting the weapon sounds.</p>
+                </div>
+            </div>
             <div class="weaponcategory" ng-repeat="category in main.weaponCategories">
 			
                 <h1 class="categoryheader">{{category}}</h1>

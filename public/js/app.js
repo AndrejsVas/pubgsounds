@@ -8,8 +8,8 @@ angular.module('app', [])
 
         vm.init = function () {
             var weapons = ["R1895", "P92", "P18C", "R45", "P1911", "SAWED OFF", "S12K", "S1897", "S686", "MICRO UZI", "KRISS VECTOR", "UMP9", "TOMMY GUN", "M16A4", "M416", "QBZ95", "SCAR-L", "AKM", "VSS", "MINI14", "SKS", "SLR", "WIN94", "KARABINER 98 KURZ", "M24", "DP 28" , "CROSSBOW"];           																		
-            var weaponRangeUnsilenced = ["600", "300", "400" ,"x", "400" ,"x" , "x" ,     "500" , "800"   , "x" ,         "x"           ,"x" ,   "x"       , "x"     ,"x"    ,"x"    , "500",  "600" ,  "x","500",   "x",   "x",   "x"   ,   "x"            ,   "x" ,   "x" ,     "0"];
-            var weaponRangeSilenced = ["300", "0", "200" , "x" , "100" ,"x" ,   "x" ,      "0" ,  "x"   , "x" ,         "x"           ,"x" ,   "x"       , "x"     ,"x"    ,"x"    , "300",     "300" ,  "x",  "300",   "x",   "x",   "x"   ,   "x"           ,   "x"   ,   "x"  ,   "0"];
+            var weaponRangeUnsilenced = ["600", "300", "400" ,"x", "400" ,"x" , "x" ,     "500" , "800"   , "x" ,         "x"           ,"x" ,   "x"       , "x"     ,"x"    ,"x"    , "500",  "600" ,  "x",   "500",   "600",   "x",   "x"   ,   "x"            ,   "x" ,   "x" ,     "0"];
+            var weaponRangeSilenced = ["300", "0", "200" , "x" , "100" ,"x" ,   "x" ,      "0" ,  "x"   , "x" ,         "x"           ,"x" ,   "x"       , "x"     ,"x"    ,"x"    , "300",     "300" ,  "x",  "300",   "300",   "x",   "x"   ,   "x"           ,   "x"   ,   "x"  ,   "0"];
             var weaponCategory = ["Pistols", "Pistols", "Pistols", "Pistols", "Pistols", "Shotguns", "Shotguns", "Shotguns", "Shotguns", "Submachine guns", "Submachine guns", "Submachine guns", "Submachine guns", "Assault rifles", "Assault rifles", "Assault rifles", "Assault rifles", "Assault rifles", "Designated marksman rifles", "Designated marksman rifles", "Designated marksman rifles", "Designated marksman rifles", "Sniper rifles", "Sniper rifles", "Sniper rifles", "Light machine guns", "Miscellaneous"];
 /*          Variable to help html determine what kind of silencer the weapon has
             1 - only unsilenced

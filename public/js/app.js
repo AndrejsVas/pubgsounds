@@ -9,7 +9,7 @@ angular.module('app', [])
         vm.init = function () {
             var weapons = ["R1895", "P92", "P18C", "R45", "P1911", "SAWED OFF", "S12K", "S1897", "S686", "MICRO UZI", "KRISS VECTOR", "UMP9", "TOMMY GUN", "M16A4", "M416", "QBZ95", "SCAR-L", "AKM", "VSS", "MINI14", "SKS", "SLR", "WIN94", "KARABINER 98 KURZ", "M24", "DP 28" , "CROSSBOW" , "MK47 MUTANT" ,"BERYL M762" ,"QBU-88"];
             var weaponRangeUnsilenced = ["600", "300", "400" ,"x", "400" ,"x" , "x" ,     "500" , "800"   , "x" ,         "400"           ,"x" ,   "x"       , "x"     ,"x"    ,"x"    , "500",  "600" ,  "x",   "500",   "600",   "x",   "x"   ,   "x"            ,   "1000" ,   "x" ,     "0" , "x" , "x" ,"x"];
-            var weaponRangeSilenced = ["300", "0", "200" , "x" , "100" ,"x" ,   "x" ,      "0" ,  "x"   , "x" ,         "200"           ,"x" ,   "x"       , "x"     ,"x"    ,"x"    , "300",     "300" ,  "x",  "300",   "300",   "x",   "x"   ,   "x"           ,   "500"   ,   "x"  ,   "0" , "x" , "x" ,"x"];
+            var weaponRangeSilenced = ["300", "0", "200" , "x" , "100" ,"x" ,   "x" ,      "0" ,  "x"   , "x" ,         "100"           ,"x" ,   "x"       , "x"     ,"x"    ,"x"    , "300",     "300" ,  "x",  "300",   "300",   "x",   "x"   ,   "x"           ,   "500"   ,   "x"  ,   "0" , "x" , "x" ,"x"];
             var weaponCategory = ["Pistols", "Pistols", "Pistols", "Pistols", "Pistols", "Shotguns", "Shotguns", "Shotguns", "Shotguns", "Submachine guns", "Submachine guns", "Submachine guns", "Submachine guns", "Assault rifles", "Assault rifles", "Assault rifles", "Assault rifles", "Assault rifles", "Designated marksman rifles", "Designated marksman rifles", "Designated marksman rifles", "Designated marksman rifles", "Sniper rifles", "Sniper rifles", "Sniper rifles", "Light machine guns", "Miscellaneous" ,"Assault rifles","Assault rifles" ,"Designated marksman rifles"];
 /*          Variable to help html determine what kind of silencer the weapon has
             1 - only unsilenced
@@ -26,6 +26,7 @@ angular.module('app', [])
             var i;
             for (i = 0; i < weapons.length; i++) {
 				vm.weapons[i] = new Object();
+				vm.weapons[i].id = i;
 				vm.weapons[i].weaponName = weapons[i];
 				vm.weapons[i].firemode = "single";
 				vm.weapons[i].rangeBar = 0;
@@ -51,15 +52,15 @@ angular.module('app', [])
         };
 
         vm.redrawRange = function (weapon, isSilenced) {
-            angular.element(document.querySelector("#"+weapon.weaponName+"RangeBar"))[0].min = weapon.rangemin;
-            angular.element(document.querySelector("#"+weapon.weaponName+"RangeBar"))[0].max = isSilenced;
-            angular.element(document.querySelector("#"+weapon.weaponName+"AudibleRange"))[0].innerHTML = "Audible range 0-" + isSilenced;
+            angular.element(document.querySelector("#RangeBar"+weapon.id))[0].min = weapon.rangemin;
+            angular.element(document.querySelector("#RangeBar"+weapon.id))[0].max = isSilenced;
+            angular.element(document.querySelector("#AudibleRange"+weapon.id))[0].innerHTML = "Audible range 0-" + isSilenced;
         };
         vm.reloadAudio = function (weapon) {
 
-            angular.element(document.querySelector("#rangeBox" + weapon.weaponName))[0].innerHTML = 'Current range is : ' + weapon.rangeBar + 'm';
-            var audio = angular.element(document.querySelector('#audio' + weapon.weaponName))[0];
-            var source = angular.element(document.querySelector('#audioSource' + weapon.weaponName))[0];
+            angular.element(document.querySelector("#rangeBox" + weapon.id))[0].innerHTML = 'Current range is : ' + weapon.rangeBar + 'm';
+            var audio = angular.element(document.querySelector('#audio' + weapon.id))[0];
+            var source = angular.element(document.querySelector('#audioSource' + weapon.id))[0];
             source.src = 'audio/' + weapon.weaponName + '-' + weapon.rangeBar + '-' + weapon.issilenced + '-' + weapon.firemode + '.mp3';
             audio.load();
         };

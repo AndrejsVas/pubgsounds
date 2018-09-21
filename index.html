@@ -20,7 +20,7 @@
                         ingame audio background and cannot be removed without affecting the weapon sounds.</p>
                 </div>
             </div>
-            <div class="weaponcategory" ng-repeat="category in main.weaponCategories">
+            <div class="weaponcategory" ng-if="main.weaponsLoaded === true" ng-repeat="category in main.weaponCategories">
 			
                 <h1 class="categoryheader">{{category}}</h1>
                 <div class="category" >
@@ -55,16 +55,16 @@
                             </form>
 
                             <div>
-                                <p id="AudibleRange{{weapon.id}}" ng-if="(weapon.maxRangeUnsilenced !== '0')">Audible Range : 0-{{weapon.maxRangeUnsilenced}}m </p>
-                                <p id="AudibleRangeMelee{{weapon.id}}" ng-if="(weapon.maxRangeUnsilenced == '0')">Audible Range : {{weapon.maxRangeUnsilenced}}m </p>
+                                <p id="AudibleRange{{weapon._id}}" ng-if="(weapon.maxRangeUnsilenced !== '0')">Audible Range : 0-{{weapon.maxRangeUnsilenced}}m </p>
+                                <p id="AudibleRangeMelee{{weapon._id}}" ng-if="(weapon.maxRangeUnsilenced == '0')">Audible Range : {{weapon.maxRangeUnsilenced}}m </p>
                                 <div class="rangeFinder">
-                                    <input id="RangeBar{{weapon.id}}" type="range" min={{weapon.minRange}} max={{weapon.maxRangeUnsilenced}} ng-model="weapon.rangeBar" step="100" ng-change="main.reloadAudio(weapon)">
+                                    <input id="RangeBar{{weapon._id}}" type="range" min={{weapon.minRange}} max={{weapon.maxRangeUnsilenced}} ng-model="weapon.rangeBar" step="100" ng-change="main.reloadAudio(weapon)">
                                     <br>
-                                    <span id="rangeBox{{weapon.id}}">Current range : 0m</span>
+                                    <span id="rangeBox{{weapon._id}}">Current range : 0m</span>
                                 </div>
                                 <div class="player">
-                                    <audio id="audio{{weapon.id}}" controls="controls">
-                                        <source id="audioSource{{weapon.id}}" src="audio/{{weapon.weaponName}}-0-0-single.mp3"></source>
+                                    <audio id="audio{{weapon._id}}" controls="controls">
+                                        <source id="audioSource{{weapon._id}}" src="audio/{{weapon.weaponName}}-0-0-single.mp3"></source>
                                         Your browser does not support the audio format.
                                     </audio>
                                 </div>
@@ -93,3 +93,4 @@
 <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
 <script src="/scripts/angular.js"></script>
 <script src="js/app.js"></script>
+<script src="js/weaponsService.js"></script>

@@ -37,5 +37,10 @@ angular.module('app', ['weaponsService'])
             audio.load();
         };
 
+        vm.number = 6;
+        vm.getNumber = function(num) {
+            return new Array(num);
+        }
+
 
     });

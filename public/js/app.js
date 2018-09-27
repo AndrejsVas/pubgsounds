@@ -16,11 +16,12 @@ angular.module('app', ['weaponsService'])
 
 
         vm.redrawReload = function (weapon, isSilenced) {
-            weapon.rangeBar = 0;
-            vm.reloadAudio(weapon);
+
             if (typeof isSilenced != 'undefined') {
+                weapon.rangeBar = 0;
                 vm.redrawRange(weapon, isSilenced);
             }
+            vm.reloadAudio(weapon);
         };
 
         vm.redrawRange = function (weapon, isSilenced) {

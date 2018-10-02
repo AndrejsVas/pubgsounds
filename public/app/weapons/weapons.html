@@ -1,0 +1,95 @@
+<div class="weaponcategory" ng-repeat="category in main.weaponCategories">
+
+    <h1 class="categoryheader">{{category}}</h1>
+    <div class="category">
+
+
+        <div class="container" ng-if="main.weaponsLoaded === false" ng-repeat="i in main.getNumber(main.number) track by $index">
+            <div class="ph-item">
+                <div class="ph-col-12">
+                    <div class="ph-row">
+                        <div id="placeholderImage">
+
+                        </div>
+                        <div class="rightSide ph-col-6 empty">
+                            <br>
+                            <div class="ph-col-4 big weaponname"></div>
+
+                            <!--Silenced-->
+                            <div class="ph-col-6 big"></div>
+                            <!--Firemode-->
+                            <div class="ph-col-6 big"></div>
+                            <!--Audible Range-->
+                            <div class="ph-col-6 big"></div>
+                            <!--RangeBar-->
+                            <div class="ph-col-6 big"></div>
+                            <!--Current Range-->
+                            <div class="ph-col-6 big"></div>
+                            <!--Player-->
+                            <div class="ph-col-6 big"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container" ng-if="main.weaponsLoaded === true"  ng-repeat="weapon in main.weapons | filter: { weaponCategory: category }">
+            <div class="image">
+                <image src="images/{{weapon.weaponName}}.png"></image>
+            </div>
+            <div class="rightSide">
+                <h1>{{weapon.weaponName}}</h1>
+
+                <form ng-if="weapon.weaponSilencedType === 2">
+                    <label>Unsilenced</label>
+                    <input type="radio" ng-model="weapon.issilenced" value='0'
+                           ng-change="main.redrawReload(weapon, weapon.maxRangeUnsilenced)">
+                    <label>Silenced</label>
+                    <input type="radio" ng-model="weapon.issilenced" value='1'
+                           ng-change="main.redrawReload(weapon, weapon.maxRangeSilenced)">
+                </form>
+                <form ng-if="(weapon.weaponFireModes === 2||weapon.weaponFireModes === 4||weapon.weaponFireModes === 5)">
+                    <div class="radio"
+                         ng-if="(weapon.weaponFireModes === 1||weapon.weaponFireModes === 2||weapon.weaponFireModes === 4||weapon.weaponFireModes === 5)">
+                        <label>Single</label>
+                        <input type="radio" ng-model="weapon.firemode" value="single"
+                               ng-change="main.redrawReload(weapon)">
+                    </div>
+                    <div class="radio"
+                         ng-if="(weapon.weaponFireModes === 2||weapon.weaponFireModes === 3||weapon.weaponFireModes === 4)">
+                        <label>Auto</label>
+                        <input type="radio" ng-model="weapon.firemode" value="auto"
+                               ng-change="main.redrawReload(weapon)">
+                    </div>
+                    <div class="radio" ng-if="(weapon.weaponFireModes === 4||weapon.weaponFireModes === 5)">
+                        <label>Burst</label>
+                        <input type="radio" ng-model="weapon.firemode" value="burst"
+                               ng-change="main.redrawReload(weapon)">
+                    </div>
+                </form>
+
+                <div>
+                    <p id="AudibleRange{{weapon._id}}" ng-if="(weapon.maxRangeUnsilenced !== '0')">Audible Range
+                        : 0-{{weapon.maxRangeUnsilenced}}m </p>
+                    <p id="AudibleRangeMelee{{weapon._id}}" ng-if="(weapon.maxRangeUnsilenced == '0')">Audible
+                        Range : {{weapon.maxRangeUnsilenced}}m </p>
+                    <div class="rangeFinder">
+                        <input id="RangeBar{{weapon._id}}" type="range" min={{weapon.minRange}}
+                               max={{weapon.maxRangeUnsilenced}} ng-model="weapon.rangeBar" step="100"
+                               ng-change="main.reloadAudio(weapon)">
+                        <br>
+                        <span id="rangeBox{{weapon._id}}">Current range : 0m</span>
+                    </div>
+                    <div class="player">
+                        <audio id="audio{{weapon._id}}" controls="controls">
+                            <source id="audioSource{{weapon._id}}"
+                                    src="audio/{{weapon.weaponName}}-0-0-single.mp3"></source>
+                            Your browser does not support the audio format.
+                        </audio>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

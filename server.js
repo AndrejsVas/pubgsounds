@@ -11,7 +11,7 @@ app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({extended : true}));
 app.use(bodyParser.json());
 app.use(express.static(__dirname +  '/public'));
-app.use('/scripts', express.static(__dirname + '/node_modules/angular'));
+app.use('/scripts', express.static(__dirname + '/node_modules'));
 var apiRouter = require('./app/routes/apirouter.js')(app,express);
 app.use('/api',apiRouter);
 

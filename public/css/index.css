@@ -22,7 +22,6 @@ body {
 }
 #disclaimerWraper{
     margin-top: 0px;
-    margin-bottom: -60px;
     background-image: url('../images/banner.png');
     height:400px;
 }
@@ -54,6 +53,7 @@ body {
     font-family: 'Lora', serif;
     text-align: center;
     color:#ff9900;
+    margin-top:0px;
 }
 .category {
     display:flex;

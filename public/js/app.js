@@ -1,4 +1,4 @@
-angular.module('app', ['weaponsService'])
+angular.module('app', ['weaponsService' , 'route' , 'aboutCtrl' ])
     .controller('maincontroller', function (Weapon) {
 
         var vm = this;

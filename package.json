@@ -17,10 +17,11 @@
   },
   "homepage": "https://gitlab.com/FFVictory/pubgsounds#README",
   "dependencies": {
-    "angular": "^1.7.2",
+    "@uirouter/angularjs": "^1.0.20",
+    "angular": "^1.7.4",
     "body-parser": "^1.18.3",
     "express": "^4.16.3",
-    "mongoose": "^5.2.16",
-    "morgan": "^1.9.0"
+    "mongoose": "^5.3.0",
+    "morgan": "^1.9.1"
   }
 }

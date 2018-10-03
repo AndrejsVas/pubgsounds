@@ -27,20 +27,21 @@
 <div class="bg">
     <div id="header">
         <div class="topnav">
-            <div id="logo">
-                <a ui-sref="weapons"><image src="images/pubgsoundslogo.png"></image></a>
-                <a ui-sref="about">Abouty</a>
+            <ul id="menu">
+                <li id="whitespace"></li>
+                <li id="logo"><a ui-sref="weapons" ><image  id="logoimage" src="images/pubgsoundslogo.png"></image></a></li>
+                <li id="aboutli"><a id="about" ui-sref="about" >About</a></li>
 
-            </div>
+            </ul>
 
         </div>
 
     </div>
     <div class="main">
 
-            <ui-view>
-                <i>Loading ....</i>
-            </ui-view>
+        <ui-view>
+            <i>Loading ....</i>
+        </ui-view>
         <footer class="footer">
             <p class="copyright">Andrejs Vasiljevs & Arturs Mjakota © 2018</p>
             <br>

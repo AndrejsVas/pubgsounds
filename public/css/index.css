@@ -10,9 +10,7 @@ body {
     overflow: hidden;
 
 }
-.topnav #logo{
-    text-align:center;
-}
+
 #header {
     margin-left: 11% ;
     margin-right: 11% ;
@@ -24,6 +22,7 @@ body {
     margin-top: 0px;
     background-image: url('../images/banner.png');
     background-size:     cover;
+    background-repeat: no-repeat;
     height:400px;
 }
 .disclaimer{
@@ -38,7 +37,7 @@ body {
     font-size: 1.2em;
     margin-left:2%;
     margin-right:2%;
-    /*font-weight: bold;*/
+
 }
 .disclaimerHeader{
     padding-top:50px;
@@ -52,9 +51,12 @@ body {
     margin-right: 11% ;
 }
 .categoryheader{
+    display:flex;
+    align-items:center;
+    justify-content: center;
 	height: 110px;
     background-color:#404040;
-    font-size:80px;
+    font-size:60px;
     font-family: 'Lora', serif;
     text-align: center;
     color:#ff9900;
@@ -131,7 +133,7 @@ input[type=range]{
     padding: 45px;
     margin-top: 80px;
     position:relative;
-/*    box-shadow: 0 1px 1px 4px rgba(0, 0, 0, 0.4);*/
+
     box-sizing: border-box;
     text-align: center;
     background-color: #404040;
@@ -160,4 +162,37 @@ input[type=range]{
     .categoryheader{
         font-size:40px;
     }
+}
+
+
+.topnav #menu{
+    display:flex;
+    align-items: center;
+
+}
+ul{
+    padding: 0;
+    list-style: none;
+    margin:0;
+}
+#logo{
+    margin-left:auto;
+    margin-right:auto;
+}
+#about{
+    text-decoration: none;
+    color:orange;
+    font-size: 24px;
+
+}
+#aboutli{
+
+    padding-right :20px;
+
+}
+#whitespace{
+    width:80px;
+}
+#logoimage{
+
 }

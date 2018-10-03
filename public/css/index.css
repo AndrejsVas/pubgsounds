@@ -1,3 +1,6 @@
+html {
+    overflow-y: scroll;
+}
 .bg {
     background-color: #0b0b0bf2;
     overflow:auto;

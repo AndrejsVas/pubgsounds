@@ -1,8 +1,8 @@
-angular.module('app', ['weaponsService' , 'route' , 'aboutCtrl' ])
+angular.module('app', ['weaponsService', 'route', 'aboutCtrl'])
     .controller('maincontroller', function (Weapon) {
 
         var vm = this;
-        vm.weaponsLoaded =false;
+        vm.weaponsLoaded = false;
         vm.weapons = [];
         vm.weaponCategories = ["Pistols", "Shotguns", "Submachine guns", "Assault rifles", "Designated marksman rifles", "Sniper rifles", "Light machine guns", "Miscellaneous"];
         Weapon.getAll()
@@ -27,7 +27,13 @@ angular.module('app', ['weaponsService' , 'route' , 'aboutCtrl' ])
         vm.redrawRange = function (weapon, isSilenced) {
             angular.element(document.querySelector("#RangeBar" + weapon._id))[0].min = weapon.rangemin;
             angular.element(document.querySelector("#RangeBar" + weapon._id))[0].max = isSilenced;
-            angular.element(document.querySelector("#AudibleRange" + weapon._id))[0].innerHTML = "Audible range 0-" + isSilenced;
+            if (isSilenced == 0) {
+                angular.element(document.querySelector("#AudibleRange" + weapon._id))[0].innerHTML = "Audible range : " + isSilenced;
+
+            }
+            else {
+                angular.element(document.querySelector("#AudibleRange" + weapon._id))[0].innerHTML = "Audible range : 0-" + isSilenced;
+            }
         };
         vm.reloadAudio = function (weapon) {
 
@@ -39,7 +45,7 @@ angular.module('app', ['weaponsService' , 'route' , 'aboutCtrl' ])
         };
 
         vm.number = 6;
-        vm.getNumber = function(num) {
+        vm.getNumber = function (num) {
             return new Array(num);
         }
 

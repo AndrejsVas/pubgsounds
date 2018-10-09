@@ -1,6 +1,8 @@
 var app = angular.module('route' , ['ui.router']);
-app.config(['$stateProvider'  , '$urlRouterProvider' ,function($stateProvider,$urlRouterProvider){
+app.config(['$stateProvider'  , '$urlRouterProvider' ,'$locationProvider',function($stateProvider,$urlRouterProvider
+,$locationProvider){
     $urlRouterProvider.otherwise('/weapons');
+    $locationProvider.html5Mode(true);
     $stateProvider
         .state('about' , {
             url : '/about' ,

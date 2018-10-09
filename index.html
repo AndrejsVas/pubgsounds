@@ -20,7 +20,9 @@
 
         gtag('config', 'UA-126465482-1');
     </script>
+    <meta charset="utf-8">
 
+    <base href="/">
 </head>
 <body id="mainwrap" ng-app="app" ng-controller="maincontroller as main">
 
@@ -29,8 +31,10 @@
         <div class="topnav">
             <ul id="menu">
                 <li id="whitespace"></li>
-                <li id="logo"><a ui-sref="weapons" ><image  id="logoimage" src="images/pubgsoundslogo.png"></image></a></li>
-                <li id="aboutli"><a id="about" ui-sref="about" >About</a></li>
+                <li id="logo"><a ui-sref="weapons">
+                    <image id="logoimage" src="images/pubgsoundslogo.png"></image>
+                </a></li>
+                <li id="aboutli"><a id="about" ui-sref="about">About</a></li>
 
             </ul>
 

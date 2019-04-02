@@ -15,14 +15,14 @@ app.use('/scripts', express.static(__dirname + '/node_modules'));
 var apiRouter = require('./app/routes/apirouter.js')(app,express);
 app.use('/api',apiRouter);
 
-function requireHTTPS(req, res, next) {
+//function requireHTTPS(req, res, next) {
     // The 'x-forwarded-proto' check is for Heroku
-    if (!req.secure && req.get('x-forwarded-proto') !== 'https' && process.env.NODE_ENV !== "development") {
-        return res.redirect('https://' + req.get('host') + req.url);
-    }
-    next();
-}
-app.use(requireHTTPS);
+    //if (!req.secure && req.get('x-forwarded-proto') !== 'https' && process.env.NODE_ENV !== "development") {
+    //    return res.redirect('https://' + req.get('host') + req.url);
+    //}
+    //next();
+//}
+//app.use(requireHTTPS);
 
 app.use(function(req, res, next) {
     res.setHeader('Access-Control-Allow-Origin', '*');

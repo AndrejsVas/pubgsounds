@@ -11,5 +11,5 @@ Each weapons information is loaded from the database. This includes: firing mode
 ## Technologies Used
 AngularJs<br> MongoDB<br>  NodeJs<br>
 
+![alt text](https://user-images.githubusercontent.com/102141523/182853317-402a74e5-313b-41cd-864f-e3da24dcc47e.png)
 
-[image](https://user-images.githubusercontent.com/102141523/182851018-9dd117fd-7440-4924-93fc-a706132e850d.png)

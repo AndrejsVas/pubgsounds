@@ -33,8 +33,16 @@ app.use(function(req, res, next) {
 app.get('*' ,function(req,res,next){
     res.sendFile(__dirname + '/index.html');
 });
-mongoose.connect('mongodb://opikol:solo322@ds263172.mlab.com:63172/pubgsounds_db');
+try{
+mongoose.connect('mongodb+srv://opikol:solo322@cluster0.i3es5os.mongodb.net/pubgsounds_db?retryWrites=true&w=majority',
+      { useNewUrlParser: true, useUnifiedTopology: true },
+      () => console.log(" Mongoose is connected")
+);
 var port = process.env.PORT || 8000
+}
+catch(e){
+console.log("could not connect to mongodb")
+}
 app.listen(port, function() {
     console.log("App is running on port " + port);
 });
